@@ -1,0 +1,20 @@
+@font-face{ 
+    font-family: "mplus"
+    src: url(_mplus-1p-regular_0.ttf) format("truetype");
+    font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{ 
+    font-family: "mplus"
+    src: url(_mplus-1p-light_1.ttf) format("truetype"),
+    font-weight: lighter;
+	font-style: normal;
+}
+
+@font-face{ 
+    font-family: "mplus"
+    src: url(_mplus-1p-bold_1.ttf) format("truetype");
+    font-weight: bold;
+	font-style: normal;
+}

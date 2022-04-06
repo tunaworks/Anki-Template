@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<head>
+    <!-- maximum-scale is for iPhone landscape orientation zoom issue !-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=2.0">
+    <!-- <link rel="stylesheet" href="_base0.css"> 
+    <link rel="stylesheet" media="(max-width:480px)" href="_mobile.css"> !-->
+</head>
+
+
+<body>
+    <div class="layout">
+        
+        <div class="flex-container" id="c0">    
+            <div class="navbar">
+                <div class="Tags">{{Tags}}</div>
+            </div>
+            
+            <div class="flex-container" id="c1">
+    
+                <div class = "flex-item" id="i1">
+                   <h1>
+                        <ruby>
+                            <text id = "Front">{{Front}}</text>
+                            <rp>（</rp>
+                                <rt>{{読み方}}</rt>
+                            <rp>）</rp>
+                        </ruby>
+                    </h1>
+                    {{type:Front}}
+                </div>
+                
+                <div class = "flex-container" id="c2">
+                        <div class = "flex-item" id="i2">
+                            {{意味(短)}}
+                        </div>
+                        
+                        <div class= "flex-item">
+                            {{#メディア}}
+                                <div>
+                                    {{メディア}}
+                                </div>
+                            {{/メディア}}
+                            
+                            {{#訳語}}
+                                <div>
+                                    {{hint:訳語}}
+                                </div>
+                            {{/訳語}}
+                        </div>
+                </div>
+                
+            </div>
+                
+        </div>
+        
+        <hr>
+        <div class="textbody">
+            <text class="意味">
+                {{意味}}<hr>
+{{例}}
+            </text>
+        </div>
+        <hr>
+        <a href="https://dic.yahoo.co.jp/search/?ei=UTF-8&fr=kb&p={{読み方}}&dic_id=all&stype=full">辞書検索</a> 
+        
+    </div>
+</body>
+
+
+
+<script>
+/* typeans source https://goo.gl/oFW13T */
+    /*var typeans = document.getElementsByTagName("center")[0];*/
+    var typeans = document.getElementById("typeans");
+    var tags = document.getElementsByClassName("Tags")[0];
+    function tagfilter(){
+       tags.innerHTML = tags.innerHTML.replace("marked", " ");
+    }
+
+    function typelen(){
+    /* 
+    typeans.outerHTML = "<input id = \'typeans\' type=\'text\' value=\'\' maxlength=" + "{{読み方}}".length + 2 + ">" */
+    typeans.maxLength = "{{読み方}}".length + 2;
+    }
+    if (typeans){
+        typelen();
+    }
+    if (tags){
+    tagfilter();
+    }
+    function i(){
+        var Front = document.getElementById("Front");
+        var punc = new RegExp("\(.*\)","u");
+        Front.innerHTML = Front.innerHTML.match(punc)[1];
+    }
+    i();
+</script>
+

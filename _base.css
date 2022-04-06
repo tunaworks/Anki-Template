@@ -1,0 +1,228 @@
+@import url("_fontface.css");
+@import url("_normalize.css");
+
+
+/*
+:root{
+    --bg: #3B4E70;
+    --hr: #4D7E79;
+    --意味ｓ: #DCE0E7;
+    --意味sbg: #596B8C;
+    --text: #B2BBCB;
+    --textbg: #25395D;
+    --typeans: #7F8CA3;
+    --typeGood: #4D7E79;
+    
+    --typeWrong: #A64E54;
+    --訳語: #7F8CA3;
+    --link: #D7E1E0;
+    --linkbg: #4D7E79;
+}
+*/
+
+.card {
+ font-family: "mplus";
+ font-size: 1.0em;
+ text-align:center;
+ color: #ffffff;
+ background-color: #3B4E70;
+}
+
+/* BUILTINS */
+
+*{
+    box-sizing: border-box;
+}
+
+.layout{
+    display:flex;
+    flex-flow: column wrap;
+    align-items:center !important;
+    min-width:280px;
+    max-width:480px;
+    margin:0%;
+   padding:12% 4%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size:140%;
+    font-weight:bold;
+    margin:0% 0% 0.4% 0%;
+    padding:0%;
+    /*text-shadow: 0% 0% black;*/
+}
+
+body{
+position: sticky;
+overflow-x:hidden;
+display:flex;
+justify-content: center;
+height:100vw;
+width:100vw;
+}
+
+hr{
+position:relative;
+padding:0%;
+margin:2% 0.4% 4% 0%;
+width:100%;
+    
+border-style: dashed;
+border-color: #4D7E79;
+border-width:0.1em;
+border-spacing:8%;
+border-radius:4em;
+}
+
+a:link{
+padding: 0.3em 0.4em;
+flex-shrink:0;
+
+font-size: 70%;
+font-weight: bold;
+color: #D7E1E0;
+
+border-radius:0.4em;
+text-decoration: none;
+background-color: #4D7E79;
+
+/*overflow:ellipses; */
+}
+
+
+/* ============== */
+
+
+.flex-container{
+    display:flex;
+    flex-flow: row;
+    /*border: 0.2em solid black;*/
+    
+    margin:0%;
+    padding:0%;
+}
+
+
+#c0{
+    width:100% !important;
+    flex-flow:column;
+    align-items:stretch;
+
+}
+
+.navbar{
+    width:100%;
+    display:flex;
+    /*text-overflow:"▼";*/
+    flex-flow:row nowrap;
+    justify-content:flex-end;
+    overflow:hidden;
+    /*border: 0.2em solid black;*/
+}
+
+.navbar .Tags{
+    width:50%;
+    display:flex;
+    flex-flow: row-reverse;
+ 
+    font-size:80%;
+  
+    overflow:hidden;
+    direction:ltr;
+}
+
+#c1{
+    flex-flow:row nowrap;
+    align-items: stretch;
+}
+
+
+#i1{
+    margin:0% 4%;
+    flex:1;
+    display:flex;
+    flex-flow:column;
+    align-items:center;
+    white-space:nowrap;
+
+    /*border:0.2em solid black;*/
+}
+
+#c2{
+    margin:0%;
+    padding: 4% 2% 4% 2%;
+    flex:2;
+    display:flex;
+    flex-flow: column;
+    color: #DCE0E7;
+    background-color: #596B8C;
+
+    border-radius: 0.4em;
+}
+
+rt{
+font-size:50%;
+width:auto;
+}
+
+.読み方 {
+font-size: 1em;
+font-weight: bold;
+/*background-color:*/
+color: white;
+}
+
+input[type=text]{ 
+margin:0%;
+padding:0%;
+
+font-family:"mplus";
+font-style:normal;
+font-weight:bold;
+font-size: 80%;
+text-align:center;
+border-radius:2em;
+width:100%;
+height:100%;
+}
+
+
+.typeGood{
+background-color:#4D7E79;
+}
+
+.typeBad, .typeMissed{
+font-weight:bold;
+background-color:#A64E54;
+}
+
+.textbody{
+width:100%;
+display:flex;
+justify-content:center;
+margin: 0%;
+padding: 4%;
+border-radius:1em;
+color:#B2BBCB;
+background-color:#25395D;
+}
+
+.意味 {
+text-align:justify;
+color: white;
+}
+
+
+
+.訳語{
+color: #7F8CA3;
+}
+
+.Tags{
+    color: #94AEAB;
+}
+
+
+
+
+
